@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     13585,        367]
-NotebookOptionsPosition[     10706,        322]
-NotebookOutlinePosition[     11167,        340]
-CellTagsIndexPosition[     11124,        337]
+NotebookDataLength[     13641,        368]
+NotebookOptionsPosition[     10762,        323]
+NotebookOutlinePosition[     11223,        341]
+CellTagsIndexPosition[     11180,        338]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -169,32 +169,33 @@ Cell[BoxData[
       RowBox[{"k", "+", "1"}]], 
      SubscriptBox["A", "i"]}], ")"}], "=", 
    RowBox[{
-    RowBox[{"P", "(", 
-     RowBox[{
-      RowBox[{
-       UnderoverscriptBox["\[Union]", 
-        RowBox[{"i", "=", "1"}], "k"], 
-       SubscriptBox["A", "i"]}], "\[Union]", 
-      SubscriptBox["A", 
-       RowBox[{"k", "+", "1"}]]}], ")"}], "\[LessEqual]", 
     RowBox[{
      RowBox[{"P", "(", 
       RowBox[{
-       UnderoverscriptBox["\[Union]", 
-        RowBox[{"i", "=", "1"}], "n"], 
-       SubscriptBox["A", "i"]}], ")"}], "+", 
-     RowBox[{"P", "(", 
-      SubscriptBox["A", 
-       RowBox[{"k", "+", "1"}]], ")"}]}], "\[LessEqual]", 
-    RowBox[{
+       RowBox[{
+        UnderoverscriptBox["\[Union]", 
+         RowBox[{"i", "=", "1"}], "k"], 
+        SubscriptBox["A", "i"]}], "\[Union]", 
+       SubscriptBox["A", 
+        RowBox[{"k", "+", "1"}]]}], ")"}], "\[LessEqual]", 
      RowBox[{
-      UnderoverscriptBox["\[Sum]", 
-       RowBox[{"i", "=", "1"}], "n"], 
       RowBox[{"P", "(", 
-       SubscriptBox["A", "i"], ")"}]}], "+", 
-     RowBox[{"P", "(", 
-      SubscriptBox["A", 
-       RowBox[{"k", "+", "1"}]], ")"}]}], "\[LessEqual]", 
+       RowBox[{
+        UnderoverscriptBox["\[Union]", 
+         RowBox[{"i", "=", "1"}], "n"], 
+        SubscriptBox["A", "i"]}], ")"}], "+", 
+      RowBox[{"P", "(", 
+       SubscriptBox["A", 
+        RowBox[{"k", "+", "1"}]], ")"}]}], "\[LessEqual]", 
+     RowBox[{
+      RowBox[{
+       UnderoverscriptBox["\[Sum]", 
+        RowBox[{"i", "=", "1"}], "n"], 
+       RowBox[{"P", "(", 
+        SubscriptBox["A", "i"], ")"}]}], "+", 
+      RowBox[{"P", "(", 
+       SubscriptBox["A", 
+        RowBox[{"k", "+", "1"}]], ")"}]}]}], "=", 
     RowBox[{
      UnderoverscriptBox["\[Sum]", 
       RowBox[{"i", "=", "1"}], 
@@ -203,8 +204,8 @@ Cell[BoxData[
       SubscriptBox["A", "i"], ")"}]}]}]}], 
   TraditionalForm]], "EquationNumbered",
  CellChangeTimes->{{3.7777844316423435`*^9, 3.777784431659339*^9}, {
-  3.7777846404000044`*^9, 
-  3.777784727880873*^9}},ExpressionUUID->"24c82e60-f9f5-46ac-80c5-\
+   3.7777846404000044`*^9, 3.777784727880873*^9}, 
+   3.7782259250808353`*^9},ExpressionUUID->"24c82e60-f9f5-46ac-80c5-\
 9fdc5f5746c8"],
 
 Cell[TextData[{
@@ -357,18 +358,18 @@ Cell[3528, 88, 821, 26, 224, "EquationNumbered",ExpressionUUID->"09ace294-dc9b-4
 Cell[4352, 116, 413, 12, 98, "Text",ExpressionUUID->"4d2f02e3-11d4-4066-8e21-26ea6d72ec77"],
 Cell[4768, 130, 537, 15, 224, "EquationNumbered",ExpressionUUID->"ad2c3125-e45e-4fde-92ac-e4658aa0b91c"],
 Cell[5308, 147, 372, 12, 98, "Text",ExpressionUUID->"f19eacc5-798c-48ef-b4cd-eb03153e1420"],
-Cell[5683, 161, 1455, 46, 233, "EquationNumbered",ExpressionUUID->"24c82e60-f9f5-46ac-80c5-9fdc5f5746c8"],
-Cell[7141, 209, 473, 12, 98, "Text",ExpressionUUID->"61e89250-8a26-486e-9f1e-12e8b5106182"],
-Cell[7617, 223, 615, 19, 224, "EquationNumbered",ExpressionUUID->"c8e89112-dd12-4e90-b5c4-7ed91922759d"],
-Cell[8235, 244, 146, 3, 98, "Text",ExpressionUUID->"c9b8a49d-5e04-49f0-9066-bb68a980e7e7"],
-Cell[8384, 249, 190, 3, 98, "Text",ExpressionUUID->"ec87b48c-f0de-420c-b1d7-32d181caebab"],
-Cell[8577, 254, 400, 11, 125, "EquationNumbered",ExpressionUUID->"41b3241d-77e7-4713-aa01-bddf3dca092a"],
-Cell[8980, 267, 165, 3, 98, "Text",ExpressionUUID->"fea431fd-80ab-4a48-87cb-817b87f88426"],
-Cell[9148, 272, 447, 13, 125, "EquationNumbered",ExpressionUUID->"764bdac7-9802-4aa4-9282-cbce4e202732"],
-Cell[9598, 287, 203, 3, 98, "Text",ExpressionUUID->"350b117c-f701-41e8-b1e6-405e0c050af2"],
-Cell[9804, 292, 292, 8, 125, "EquationNumbered",ExpressionUUID->"881dce7a-cdba-4ed0-b2ca-cb78321d2b13"],
-Cell[10099, 302, 204, 5, 98, "Text",ExpressionUUID->"267b1c29-cfd3-495d-a839-9961a23c090f"],
-Cell[10306, 309, 396, 11, 125, "EquationNumbered",ExpressionUUID->"c93fffc0-3dfd-4342-af67-6b6c161c53d7"]
+Cell[5683, 161, 1511, 47, 233, "EquationNumbered",ExpressionUUID->"24c82e60-f9f5-46ac-80c5-9fdc5f5746c8"],
+Cell[7197, 210, 473, 12, 98, "Text",ExpressionUUID->"61e89250-8a26-486e-9f1e-12e8b5106182"],
+Cell[7673, 224, 615, 19, 224, "EquationNumbered",ExpressionUUID->"c8e89112-dd12-4e90-b5c4-7ed91922759d"],
+Cell[8291, 245, 146, 3, 98, "Text",ExpressionUUID->"c9b8a49d-5e04-49f0-9066-bb68a980e7e7"],
+Cell[8440, 250, 190, 3, 98, "Text",ExpressionUUID->"ec87b48c-f0de-420c-b1d7-32d181caebab"],
+Cell[8633, 255, 400, 11, 125, "EquationNumbered",ExpressionUUID->"41b3241d-77e7-4713-aa01-bddf3dca092a"],
+Cell[9036, 268, 165, 3, 98, "Text",ExpressionUUID->"fea431fd-80ab-4a48-87cb-817b87f88426"],
+Cell[9204, 273, 447, 13, 125, "EquationNumbered",ExpressionUUID->"764bdac7-9802-4aa4-9282-cbce4e202732"],
+Cell[9654, 288, 203, 3, 98, "Text",ExpressionUUID->"350b117c-f701-41e8-b1e6-405e0c050af2"],
+Cell[9860, 293, 292, 8, 125, "EquationNumbered",ExpressionUUID->"881dce7a-cdba-4ed0-b2ca-cb78321d2b13"],
+Cell[10155, 303, 204, 5, 98, "Text",ExpressionUUID->"267b1c29-cfd3-495d-a839-9961a23c090f"],
+Cell[10362, 310, 396, 11, 125, "EquationNumbered",ExpressionUUID->"c93fffc0-3dfd-4342-af67-6b6c161c53d7"]
 }
 ]
 *)
