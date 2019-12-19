@@ -1,0 +1,159 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
+\usepackage[unicode=true]{hyperref}
+\hypersetup{
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+\date{}
+
+\begin{document}
+
+\subsection{67}\label{header-n36}
+
+记 \(Y\) 为长方形的高度, 依题意
+
+\[E(Y | X)=\frac{X}{2}\\
+E(X)=\frac{1}{2}\]
+
+\subsection{周长}\label{header-n40}
+
+\[E(2(X+Y))=2E(X+Y)\]
+
+根据定理, 这等于
+
+\[2E(X+Y)=2E(E(X+Y|X))\]
+
+考虑 \(E(X+Y|X)\)
+
+\[E(X+Y|X)=X+E(Y|X)=\frac{3X}{2}\]
+
+所以周长的期望为
+
+\[2E(\frac{3X}{2})=3E(X)=\frac{3}{2}\]
+
+\subsection{面积}\label{header-n48}
+
+\[E(XY)=E(E(XY|X))\]
+
+考虑 \(E(XY|X)\)
+
+\[E(XY|X)=XE(Y|X)=\frac{X^2}{2}\]
+
+所以面积的期望为
+
+\[E(XY)=E(\frac{X^2}{2})=\frac{1}{2}\int_0^1x^2dx=\frac{1}{6}\]
+
+\section{77}\label{header-n54}
+
+\subsection{a}\label{header-n55}
+
+\subsubsection{协方差}\label{header-n67}
+
+\[f_{X}(x)=\int_{x}^{+\infty} f(x, y) d y=\int_{x}^{+\infty} e^{-y} d y=-\left.e^{-y}\right|_{x} ^{+\infty}=e^{-x}\]
+
+\[f_{Y}(y)=\int_{0}^{y} f(x, y) d x=\int_{0}^{y} e^{-y} d x=y \cdot e^{-y}\]
+
+所以
+
+\[E(X)=\int_{0}^{+\infty} x \cdot f_{X}(x) d x=\int_{0}^{+\infty} x \cdot e^{-x} d x=1\]
+
+\[E(Y)=\int_{0}^{+\infty} y \cdot f_{Y}(y) d y=\int_{0}^{+\infty} y^{2} \cdot e^{-y} d y=2\]
+
+又
+
+\[E(X \cdot Y)=\int_{0}^{+\infty}\left(\int_{x}^{+\infty} x \cdot y \cdot f(x, y) d y\right) d x=\int_{0}^{+\infty}\left(\int_{x}^{+\infty} x \cdot y \cdot e^{-y} d y\right) d x=3\]
+
+所以
+
+\[\operatorname{Cov}(X, Y)=3-2 \cdot 1=1\]
+
+\subsubsection{相关系数}\label{header-n64}
+
+\[E\left(X^{2}\right)=\int_{0}^{+\infty} x^{2} \cdot f_{X}(x) d x=\int_{0}^{+\infty} x^{2} \cdot e^{-x} d x=2\]
+
+\[E\left(Y^{2}\right)=\int_{0}^{+\infty} y^{2} \cdot f_{Y}(y) d y=\int_{0}^{+\infty} y^{3} \cdot e^{-y} d y=6\]
+
+所以
+
+\[\operatorname{Var}(X)=2-1^{2}=1\\
+\operatorname{Var}(Y)=6-2^{2}=2\]
+
+从而
+
+\[\rho(X, Y)=\frac{1}{\sqrt{1 \cdot 2}}=\frac{\sqrt 2}{2}\]
+
+\subsection{b}\label{header-n79}
+
+\[f_{X | Y}(x | y)=\frac{f_{X, Y}(x, y)}{f_{Y}(y)}=\frac{e^{-y}}{y \cdot e^{-y}}=\frac{1}{y}\]
+
+\[f_{Y | X}(y | x)=\frac{f_{X, Y}(x, y)}{f_{X}(x)}=\frac{e^{-y}}{e^{-x}}=e^{x-y}\]
+
+所以
+
+\[E(X | Y=y)=\int_{0}^{y} x \cdot f_{X | Y}(x | y) d x=\int_{0}^{y} x \cdot \frac{1}{y} d x=\frac{1}{y} \cdot \int_{0}^{y} x d x=\frac{y}{2}\]
+
+\[E(Y | X=x)=\int_{x}^{+\infty} y \cdot f_{Y | X}(y | x) d y=\int_{x}^{+\infty} y \cdot e^{x-y} d y=x+1\]
+
+\subsection{c}\label{header-n92}
+
+令
+
+\[U=E(X|Y)=\frac{Y}{2}\\
+V=E(Y|X)=X+1\]
+
+所以
+
+\[f_U(u)=y(u) \cdot e^{-y(u)} \cdot y'(u)=4 ue^{-2 u} \quad u\ge0\]
+
+\[f_V(v)=e^{-x(v)} \cdot x'(v)=e^{1-v}\quad v\ge1\]
+
+\end{document}
